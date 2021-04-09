@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Parent Child
+        </title>
+        <style>
+            p {
+                color: blue
+            }
+
+            div p {
+                color: green;
+                font-size: 14px;
+            }
+/* this is more specific than .paragraph-with-class */
+            .div-with-class p {
+                color: purple;
+            }
+
+            .paragraph-with-class {
+                color: teal;
+            }
+
+            ul.striped-odd li:nth-child(odd) {
+                background: #ccc;
+            }
+
+            ul.striped-even li:nth-child(even) {
+                background: #ddd;
+            }
+
+            ul.first-child-border-bottom li:nth-child(1) {
+                border-bottom: 3px black dashed;
+            }
+
+            ul li:first-child {
+                list-style: none;
+                font-size: 18px;
+            }
+
+            ul li:last-child {
+                color: green; 
+                font-weight: bold;
+            }
+
+        </style>
+    </head>
+<body>
+
+    <p>stand alone paragraph</p>
+
+    <div>
+        <p>paragraph inside div</p>
+    </div>
+
+    <div class="div-with-class">
+        <p>paragraph inside div with class</p>
+        <p class="paragraph-with-class">paragraph inside div with class</p>
+
+    </div>
+
+<ul class="striped-odd">
+<li>list item</li>
+<li>list item</li>
+<li>list item</li>
+</ul>
+
+<ul class="striped-even">
+    <li>list item</li>
+    <li>list item</li>
+    <li>list item</li>
+    </ul>
+
+    <ul class="first-child-border-bottom">
+    <li>list item</li>
+    <li>list item</li>
+    <li>list item</li>
+    </ul>
+
+</body>
+
+</html>
